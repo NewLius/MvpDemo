@@ -8,7 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseActivity<P extends BasePresenter> extends AppCompatActivity {
+public abstract class BaseActivity<P extends BasePresenter,CONTRACT> extends AppCompatActivity {
+
+    public abstract CONTRACT getContract();
 
     public P mPresenter;
     private Unbinder mBind;
